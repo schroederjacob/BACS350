@@ -1,0 +1,16 @@
+# wsgi.py at Python Anywhere
+
+
+# +++++++++++ DJANGO +++++++++++
+
+import os
+import sys
+
+path = '/home/jacobschroeder/BACS350/Project2'
+if path not in sys.path:
+    sys.path.append(path)
+
+os.environ['DJANGO_SETTINGS_MODULE'] = 'Project2.settings'
+
+from django.core.wsgi import get_wsgi_application
+application = get_wsgi_application()
