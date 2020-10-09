@@ -9,3 +9,6 @@ class HeroView(TemplateView):
         heroes = Superhero.objects.all()
 #        heroes = ['SpiderMan', 'CaptainAmerica', 'IronMan', 'Daredevil', 'Wolverine']
         return {'heroes': heroes}
+
+class IndexView(TemplateView):
+    template_name = "index.html"
