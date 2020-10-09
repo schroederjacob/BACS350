@@ -1,0 +1,25 @@
+{% extends 'page_theme.html' %}
+
+
+{% block main %}
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Hero Profiles</title>
+    </head>
+    {% for hero in heroes %}
+    <body>
+        <h2>Hero - {{ hero.name }}</h2>
+        <p>
+            My favorite superhero.
+        </p>
+        <p>
+            Secret ID: {{ hero.identity }}
+        </p>
+        <p>
+            <img width="300" src="/static/images/{{ hero.name }}.jpg" alt="{{ hero.identity }}">
+        </p>
+    </body>
+    {% endfor %}
+
+{% endblock main %}
