@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from pages.views import HomeView, BasePage, HeroView
+from pages.views import HeroView
 
 urlpatterns = [
     path('', HeroView.as_view()),
