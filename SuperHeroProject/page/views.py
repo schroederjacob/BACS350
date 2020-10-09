@@ -9,12 +9,12 @@ class HeroView(TemplateView):
         return {'heroes': heroes}
  
 class AddHeroView(CreateView):
-    template_name = "hero_add.html"
+    template_name = "addhero.html"
     model = Superhero
     
 
 class BasePage(TemplateView):
-    template_name = "page_theme.html"
+    template_name = "pagetheme.html"
     
     
 class AboutPage(TemplateView):
