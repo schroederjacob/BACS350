@@ -1,6 +1,6 @@
 from django.views.generic import TemplateView
 from django.views.generic.edit import CreateView
-from .models import Superhero
+# from .models import Superhero
 
 class HeroView(TemplateView):
     template_name = "Hero.html"
