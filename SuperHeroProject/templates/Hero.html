@@ -2,13 +2,11 @@
 
 
 {% block main %}
-
-    <h1>Hero Profiles</h1>
        
-        <h2>Hero - {{ hero.name }}</h2>
-        <p>
-            Theis is my favorite superhero.
-        </p>
-            <img src="/static/images/{{ hero.name }}.jpg">
+       <h2>Hero - {{ hero.name }}</h2>
+       <p>
+           Theis is my favorite superhero.
+       </p>
+           <img src="/static/images/{{ hero }}.jpg" alt="{{ hero }}.jpg">
 
 {% endblock main %}
