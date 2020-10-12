@@ -13,3 +13,8 @@ header h1 {
 body {
     margin-left=10px;
 }
+
+a {
+    color: red;
+    text-decoration: none;
+}
