@@ -12,3 +12,6 @@ class HeroView(TemplateView):
 
 class IndexView(TemplateView):
     template_name = "index.html"
+                        
+class BaseView(TemplateView):
+    template_name = "SuperHeroTheme.html"
