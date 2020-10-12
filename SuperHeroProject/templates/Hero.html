@@ -4,15 +4,11 @@
 {% block main %}
 
     <h1>Hero Profiles</h1>
-    
-    {% for hero in heroes %}
        
         <h2>Hero - {{ hero.name }}</h2>
         <p>
             This is my favorite superhero.
         </p>
         <img width="300" src="/static/images/{{ hero.name }}.jpg">
-    
-    {% endfor %}
 
 {% endblock main %}
