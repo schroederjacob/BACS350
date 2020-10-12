@@ -4,33 +4,12 @@
   <head>
     <meta charset="UTF-8">
     <title>{{ page_title }}</title>
-    
-    {% if css %}
-    <link rel="stylesheet" href="{{ css }}">
-    {% endif %}
-    
+    <link rel="stylesheet" href="static/style.css">
   </head>
   
   <body>
+    <h1>Superhero News</h1>
     {% block content %}
-    
-    {% block header %}
-    <header>
-      
-    </header>
-    {% endblock header %}
-    
-    {% block main %}
-    <h2>NO MAIN DEFINED</h2>
-    {% endblock main %}
-
-    {% block footer %}
-    <footer class="text-center m-5">
-      &copy;2020 <a href="http://jacobschroeder.pythonanywhere.com/"></a>
-    </footer>
-    {% endblock footer %}
-    
     {% endblock content %}
-    
   </body>
 </html>
