@@ -6,7 +6,7 @@ class HeroView(TemplateView):
     template_name = "Hero.html"
 
     def get_context_data(self, **kwargs):
-        id = kwargs.get('identity', 'SpiderMan)
+        id = kwargs.get('identity', 'SpiderMan')
 #       heroes = ['SpiderMan', 'CaptainAmerica', 'IronMan', 'Daredevil', 'Wolverine']
         return {'hero': id}
 
