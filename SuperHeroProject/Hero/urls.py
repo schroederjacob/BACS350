@@ -5,6 +5,6 @@ from Hero.views import HeroView, IndexView
 urlpatterns = [
     path('', IndexView.as_view()),
     # path('index', IndexView.as_view()),
-    path('Hero/<str:identity>', HeroView.as_view())
+    path('<str:identity>', HeroView.as_view())
 
 ]
