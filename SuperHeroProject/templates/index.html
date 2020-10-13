@@ -1,23 +1,20 @@
 {% extends 'SuperHeroTheme.html' %}
 
-{% block main %}
-
   <h1>Superhero News</h1>
-
-  <p>
-    <a href="Hero/SpiderMan">Spider-Man Profile</a>
-</p>
-  <p>
-    <a href="Hero/CaptainAmerica">Captain America Profile</a>
-</p>
-<p>
-  <a href="Hero/IronMan">Iron Man Profile</a>
-</p>
-<p>
-  <a href="Hero/Daredevil">Daredevil Profile</a>
-</p>
-<p>
-  <a href="Hero/Wolverine">Wolverine Profile</a>
-</p>
-
-{% endblock main %}
+    {% block content %}
+    <p>
+        <a href="SpiderMan">Spider-Man Profile</a>
+    </p>
+    <p>
+        <a href="CaptainAmerica">Captain America Profile</a>
+    </p>
+    <p>
+    <a href="IronMan">Iron Man Profile</a>
+    </p>
+    <p>
+        <a href="Daredevil">Daredevil Profile</a>
+    </p>
+    <p>
+        <a href="Wolverine">Wolverine Profile</a>
+    </p>
+    {% endblock content %}
