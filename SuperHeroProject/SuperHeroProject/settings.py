@@ -26,7 +26,7 @@ SECRET_KEY = '=dy6il60_%k7jyvy@wopr2*cyeg2k7ajyd@noh5wo6(xd^kbk2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['jacobschroeder.pythonanywhere.com']
+ALLOWED_HOSTS = ['jacobschroeder.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
     'Hero'
 ]
 
@@ -56,7 +57,7 @@ ROOT_URLCONF = 'SuperHeroProject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['/Documents/GitHub/BACS350/SuperHeroProject/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

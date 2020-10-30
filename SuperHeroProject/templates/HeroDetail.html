@@ -1,0 +1,20 @@
+{% extends 'SuperHeroTheme.html' %}
+
+{% block content %}
+<h2>Hero - {{ hero }}</h2>
+<p>
+    <a href="/">Hero List</a>
+</p>
+<p>
+    Hero: {{ object.name }}
+</p>
+<p>
+    Secret ID: {{ object.identity }}
+</p>
+<p>
+    Image: {{ object.image }}
+</p>
+<p>
+    <a href="{{ object.pk }}/" class="btn">Edit</a>
+</p>
+{% endblock content %}

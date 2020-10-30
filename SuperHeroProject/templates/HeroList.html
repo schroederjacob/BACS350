@@ -1,0 +1,15 @@
+{% extends 'SuperHeroTheme.html' %}
+
+  <h1>Superhero News</h1>
+    {% block content %}
+        {% for hero in object_list %}
+            <p>
+                Hero: {{ hero.name }}
+            </p>
+            <p>
+                Secret Identity: {{ hero.identity }}
+            </p>
+
+            <img width="300" src="/static/{{ hero.image }}" alt="{{ hero.identity }}">
+        {% endfor %}
+    {% endblock content %}
