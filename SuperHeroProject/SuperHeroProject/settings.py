@@ -57,8 +57,9 @@ ROOT_URLCONF = 'SuperHeroProject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/Documents/GitHub/BACS350/SuperHeroProject/templates'],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
+        ## Temp_Path +"/template"
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
