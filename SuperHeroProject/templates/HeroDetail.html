@@ -12,9 +12,10 @@
     Secret ID: {{ object.identity }}
 </p>
 <p>
-    Image: {{ object.image }}
+    <img src="{{ object.image.url }}" alt="{{ object.identity }}" width="300">
 </p>
 <p>
     <a href="{{ object.pk }}/" class="btn">Edit</a>
 </p>
 {% endblock content %}
+}}

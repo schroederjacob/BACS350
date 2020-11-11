@@ -10,7 +10,7 @@
                 Secret Identity: {{ hero.identity }}
             </p>
 
-            <img width="300" src="/static/images/{{ hero.image }}.jpg" alt="{{ hero.identity }}">
+            <a href="{% url 'HeroDetail' hero.id %}"><img src="{{ hero.image.url }}" alt="{{ hero.identity }}" width="300"></a>
             <br>
             <br>
         {% endfor %}
