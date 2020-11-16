@@ -3,6 +3,7 @@ from django.urls import path
 from Hero.views import HeroView, IndexView, HeroAddView, HeroListView, HeroEditView, HeroDetailView, HeroDeleteView
 from django.conf.urls.static import static
 from django.conf import settings
+from Hero import views
 
 urlpatterns = [
     # path('', IndexView.as_view()),
@@ -13,7 +14,7 @@ urlpatterns = [
     path('add', HeroAddView.as_view(), name='AddHero'),
     path('<int:pk>/', HeroEditView.as_view(), name='EditHero'),
     path('<int:pk>', HeroDetailView.as_view(), name='HeroDetail'),
-    path('<int:pk>/delete', HeroDeleteView.as_view(), name='DeleteHero')
+    path('<int:pk>/delete/', HeroDeleteView.as_view(), name='DeleteHero')
 ]
 
 if settings.DEBUG:
