@@ -24,7 +24,6 @@ class HeroAddView(CreateView):
     template_name = "AddHero.html"
     model = Superhero
     fields = '__all__'
-    success_url = reverse_lazy('HeroList')
 
 class HeroEditView(UpdateView):
     template_name = "EditHero.html"
@@ -34,7 +33,7 @@ class HeroEditView(UpdateView):
 class HeroDetailView(DetailView):
     template_name = "HeroDetail.html"
     model = Superhero
-    context_object_name = 'object'
+    context_object_name = 'hero'
     
 
 class HeroListView(ListView):
@@ -46,18 +45,3 @@ class HeroDeleteView(DeleteView):
     template_name = "DeleteHero.html"
     model = Superhero
     success_url = reverse_lazy('HeroList')
-
-class SuperheroImage(TemplateView):
-    form = SuperheroForm
-    template_name = 'heroimage.html'
-
-    def post(self, request, *args, **kwargs):
-        form = SuperheroForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()
-            return HttpResponseRedirect(reverse_lazy('home', kwargs={'pk': pk}))
-        context = self.get_context_data(form=form)
-        return self.render_to_response(context)     
-
-    def get(self, request, *args, **kwargs):
-        return self.post(request, *args, **kwargs)

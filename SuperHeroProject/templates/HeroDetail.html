@@ -6,17 +6,17 @@
     <a href="/">Hero List</a>
 </p>
 <p>
-    Hero: {{ object.name }}
+    Hero: {{ hero.name }}
 </p>
 <p>
-    Secret ID: {{ object.identity }}
+    Secret ID: {{ hero.identity }}
 </p>
 <p>
-    <img src="{{ object.image.url }}" alt="{{ object.identity }}" width="300">
+    <img src="{{ hero.image.url }}" alt="{{ hero.identity }}" width="300">
 </p>
 <p>
-    <a href="{{ object.pk }}/" class="btn">Edit</a>
-    <a href="{{ object.pk }}/delete" class="btn">Delete</a>
+    <a href="{{ hero.pk }}/" class="btn">Edit</a>
+    <a href="{{ hero.pk }}/delete" class="btn">Delete</a>
 </p>
 {% endblock content %}
 }}
