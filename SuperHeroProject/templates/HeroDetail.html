@@ -9,14 +9,12 @@
     Hero: {{ hero.name }}
 </p>
 <p>
-    Secret ID: {{ hero.identity }}
+    Secret Identity: {{ hero.identity }}
 </p>
 <p>
-    <img src="{{ hero.image.url }}" alt="{{ hero.identity }}" width="300">
+    <img width="200" src="static/images/{{ hero.image }}">
 </p>
 <p>
     <a href="{{ hero.pk }}/" class="btn">Edit</a>
-    <a href="{{ hero.pk }}/delete" class="btn">Delete</a>
 </p>
 {% endblock content %}
-}}

@@ -5,7 +5,8 @@ from django.urls import reverse
 class Superhero(models.Model):
     name = models.CharField(max_length=20)
     identity = models.CharField(max_length=20)
-    image = models.ImageField(default='placeholder.jpg',upload_to='upload/')
+    ## image = models.ImageField(default='placeholder.jpg',upload_to='upload/')
+    image = models.CharField(max_length=80)
     
     def __str__(self):
         return self.identity
