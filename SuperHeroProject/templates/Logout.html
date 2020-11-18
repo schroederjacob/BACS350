@@ -1,0 +1,18 @@
+{% extends 'SuperHeroTheme.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="container">
+
+    <h1>You have been logged out</h1>
+
+    <p>
+        <a href="{% url 'Login' %}">Sign Back In</a>
+    </p>
+
+
+</div>
+
+{% endblock content %}

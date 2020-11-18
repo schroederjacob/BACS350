@@ -1,0 +1,22 @@
+{% extends 'SuperHeroTheme.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="container">
+
+    <h1>Register Account</h1>
+
+    <form method="POST">{% csrf_token %}
+
+        <!-- Without Crispy Forms {{ form.as_p }}  -->
+
+        {{ form|crispy }}
+
+        <button class="btn btn-success" type="submit">Sign Up</button>
+    </form>
+
+</div>
+
+{% endblock content %}
