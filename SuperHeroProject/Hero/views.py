@@ -8,6 +8,10 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django.contrib.auth.forms import UserCreationForm
+from django.forms import ModelForm
+from django.db import models
+from django.contrib.auth.models import User
+from django import forms
 
 class HeroView(TemplateView):
     template_name = "Hero.html"
@@ -48,12 +52,27 @@ class HeroDeleteView(DeleteView):
     model = Superhero
     success_url = reverse_lazy('HeroList')
 
-class RegisterView(CreateView):
-    template_name = "Register.html"
-    form_class = UserCreationForm
-    success_url = reverse_lazy('Login')
-    
-class ProfileView(TemplateView):
-    template_name = "Profile.html"
-    model = Profile
-    context_object_name = 'user'
+## class RegisterView(CreateView):
+    ## template_name = "Register.html"
+    ## form_class = UserCreationForm
+    ## success_url = reverse_lazy('Login')
+
+def Register(request):
+    if request.method == 'POST':
+        form = RegisterForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            return redirect('Login')
+    else:
+        form = RegisterForm()
+    return render(request, 'Register.html', {'form': form})
+
+@login_required
+def Profile(request):
+    return render(request, 'Profile.html')
+
+## class ProfileView(TemplateView):
+    ## template_name = "Profile.html"
+    ## model = Profile
+    ## context_object_name = 'user'
